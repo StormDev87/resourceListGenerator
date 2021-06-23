@@ -1,7 +1,7 @@
 ﻿
 namespace createResourceText
 {
-  partial class Form1
+  partial class GenRes
   {
     /// <summary>
     ///  Required designer variable.
@@ -29,6 +29,7 @@ namespace createResourceText
     /// </summary>
     private void InitializeComponent()
     {
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenRes));
       this.btnOpenDir = new System.Windows.Forms.Button();
       this.dgvList = new System.Windows.Forms.DataGridView();
       this.dir = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,13 +42,16 @@ namespace createResourceText
       this.panel1 = new System.Windows.Forms.Panel();
       this.menuStrip1 = new System.Windows.Forms.MenuStrip();
       this.aBCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.inclusioneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.includiTuttiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.escludiTuttiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
       this.menuStrip1.SuspendLayout();
       this.SuspendLayout();
       // 
       // btnOpenDir
       // 
-      this.btnOpenDir.Location = new System.Drawing.Point(11, 138);
+      this.btnOpenDir.Location = new System.Drawing.Point(12, 27);
       this.btnOpenDir.Name = "btnOpenDir";
       this.btnOpenDir.Size = new System.Drawing.Size(116, 29);
       this.btnOpenDir.TabIndex = 0;
@@ -66,10 +70,10 @@ namespace createResourceText
             this.Start,
             this.comment,
             this.typeIncl});
-      this.dgvList.Location = new System.Drawing.Point(12, 172);
+      this.dgvList.Location = new System.Drawing.Point(12, 62);
       this.dgvList.Name = "dgvList";
       this.dgvList.RowTemplate.Height = 25;
-      this.dgvList.Size = new System.Drawing.Size(1109, 457);
+      this.dgvList.Size = new System.Drawing.Size(1109, 423);
       this.dgvList.TabIndex = 1;
       // 
       // dir
@@ -100,7 +104,7 @@ namespace createResourceText
       // 
       // tbPath
       // 
-      this.tbPath.Location = new System.Drawing.Point(132, 138);
+      this.tbPath.Location = new System.Drawing.Point(133, 27);
       this.tbPath.Multiline = true;
       this.tbPath.Name = "tbPath";
       this.tbPath.Size = new System.Drawing.Size(296, 28);
@@ -108,7 +112,7 @@ namespace createResourceText
       // 
       // btnGenResource
       // 
-      this.btnGenResource.Location = new System.Drawing.Point(888, 138);
+      this.btnGenResource.Location = new System.Drawing.Point(889, 27);
       this.btnGenResource.Name = "btnGenResource";
       this.btnGenResource.Size = new System.Drawing.Size(233, 28);
       this.btnGenResource.TabIndex = 4;
@@ -118,7 +122,7 @@ namespace createResourceText
       // 
       // btnClipBoard
       // 
-      this.btnClipBoard.Location = new System.Drawing.Point(649, 138);
+      this.btnClipBoard.Location = new System.Drawing.Point(650, 27);
       this.btnClipBoard.Name = "btnClipBoard";
       this.btnClipBoard.Size = new System.Drawing.Size(233, 28);
       this.btnClipBoard.TabIndex = 5;
@@ -130,7 +134,7 @@ namespace createResourceText
       // 
       this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.panel1.Location = new System.Drawing.Point(13, 636);
+      this.panel1.Location = new System.Drawing.Point(13, 492);
       this.panel1.Name = "panel1";
       this.panel1.Size = new System.Drawing.Size(1108, 40);
       this.panel1.TabIndex = 6;
@@ -147,16 +151,40 @@ namespace createResourceText
       // 
       // aBCToolStripMenuItem
       // 
+      this.aBCToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inclusioneToolStripMenuItem});
       this.aBCToolStripMenuItem.Name = "aBCToolStripMenuItem";
-      this.aBCToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
-      this.aBCToolStripMenuItem.Text = "ABC";
-      this.aBCToolStripMenuItem.Click += new System.EventHandler(this.aBCToolStripMenuItem_Click);
+      this.aBCToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+      this.aBCToolStripMenuItem.Text = "Tools";
       // 
-      // Form1
+      // inclusioneToolStripMenuItem
+      // 
+      this.inclusioneToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.includiTuttiToolStripMenuItem,
+            this.escludiTuttiToolStripMenuItem});
+      this.inclusioneToolStripMenuItem.Name = "inclusioneToolStripMenuItem";
+      this.inclusioneToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+      this.inclusioneToolStripMenuItem.Text = "Inclusione";
+      // 
+      // includiTuttiToolStripMenuItem
+      // 
+      this.includiTuttiToolStripMenuItem.Name = "includiTuttiToolStripMenuItem";
+      this.includiTuttiToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+      this.includiTuttiToolStripMenuItem.Text = "> Includi tutti ";
+      this.includiTuttiToolStripMenuItem.Click += new System.EventHandler(this.aBCToolStripMenuItem_Click);
+      // 
+      // escludiTuttiToolStripMenuItem
+      // 
+      this.escludiTuttiToolStripMenuItem.Name = "escludiTuttiToolStripMenuItem";
+      this.escludiTuttiToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+      this.escludiTuttiToolStripMenuItem.Text = "> Escludi tutti";
+      this.escludiTuttiToolStripMenuItem.Click += new System.EventHandler(this.aBCToolStripMenuItem_Click);
+      // 
+      // GenRes
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(1131, 678);
+      this.ClientSize = new System.Drawing.Size(1131, 534);
       this.Controls.Add(this.panel1);
       this.Controls.Add(this.btnClipBoard);
       this.Controls.Add(this.btnGenResource);
@@ -164,9 +192,10 @@ namespace createResourceText
       this.Controls.Add(this.dgvList);
       this.Controls.Add(this.btnOpenDir);
       this.Controls.Add(this.menuStrip1);
+      this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.MainMenuStrip = this.menuStrip1;
-      this.Name = "Form1";
-      this.Text = "Form1";
+      this.Name = "GenRes";
+      this.Text = "GenRes";
       ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
       this.menuStrip1.ResumeLayout(false);
       this.menuStrip1.PerformLayout();
@@ -189,6 +218,9 @@ namespace createResourceText
     private System.Windows.Forms.Panel panel1;
     private System.Windows.Forms.MenuStrip menuStrip1;
     private System.Windows.Forms.ToolStripMenuItem aBCToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem inclusioneToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem includiTuttiToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem escludiTuttiToolStripMenuItem;
   }
 }
 

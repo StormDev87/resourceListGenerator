@@ -12,12 +12,12 @@ using System.IO;
 
 namespace createResourceText
 {
-  public partial class Form1 : Form
+  public partial class GenRes : Form
   {
     public string pathRootName = "";
     List<string> myResources = new List<string>();
 
-    public Form1()
+    public GenRes()
     {
       InitializeComponent();
     }
@@ -122,6 +122,19 @@ namespace createResourceText
 
     private void aBCToolStripMenuItem_Click(object sender, EventArgs e)
     {
+      ToolStripMenuItem tmp = (ToolStripMenuItem)sender;
+
+      bool value = tmp.AccessibilityObject.Name == "> Includi tutti ";
+
+
+      foreach (DataGridViewRow row in dgvList.Rows)
+      {
+
+        row.Cells[1].Value = value;
+
+
+      }
+
 
     }
   }
